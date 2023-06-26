@@ -1,0 +1,9 @@
+$reg-color: #5c69df;
+
+.container {
+  width: 100px;
+  height: 100px;
+  background-color: $reg-color;
+  display: flex;
+  flex-direction: column;
+}
