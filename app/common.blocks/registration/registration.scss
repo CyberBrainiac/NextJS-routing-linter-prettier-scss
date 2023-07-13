@@ -1,0 +1,33 @@
+@import "/app/styles/var";
+$reg-color: #5c69df;
+
+.list {
+  position: relative;
+  top: $header-height;
+  width: 100px;
+  height: 100px;
+  background-color: $reg-color;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+
+  & :nth-child(odd) {
+    background-color: gold;
+  }
+
+  @for $i from 1 through 4 {
+    &__container-#{$i} {
+      grid-column: 1;
+      grid-row: $i;
+      height: 40px;
+      width: 20px * $i;
+      background-color: goldenrod;
+
+      @if $i == 1 {
+        margin-bottom: 10px;
+      } @else if $i == 4 {
+        margin-top: 10px;
+      }
+    }
+  }
+}

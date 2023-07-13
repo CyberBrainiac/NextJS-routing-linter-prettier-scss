@@ -1,0 +1,30 @@
+@import "/app/styles/var";
+
+.header {
+  position: fixed;
+  width: inherit;
+  height: $header-height;
+  background-color: $header-bg-color;
+  z-index: 1;
+  color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .title {
+    border: 2px solid rgb(52, 21, 131);
+    border-radius: 10px;
+    padding: 10px;
+
+    &__text {
+      font-size: 40px;
+      color: rgb(231, 221, 238);
+      letter-spacing: 2px;
+    }
+
+    &__description {
+      @extend .title__text;
+      font-size: 20px;
+    }
+  }
+}
